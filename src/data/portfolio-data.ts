@@ -1,3 +1,8 @@
+import firstLogo from '@/assets/FIRST_Horz_RGB.png'
+import jtasPoster from '@/assets/JTAS_Poster.png'
+import jtasSplashArt from '@/assets/jtas_splash_art.png'
+import offbeatImage from '@/assets/offbeat.png'
+
 export const profile = {
   name: 'Christian E. Dutton',
   phone: '(470) 658-8006',
@@ -97,8 +102,7 @@ export const activities = [
     role: 'Lead Programmer',
     org: 'Journey to Arduous Star (VGDev at Georgia Tech)',
     dateRange: 'Fall 2025 - Present',
-    imageUrl:
-      'src/assets/jtas_splash_art.png',
+    imageUrl: jtasSplashArt,
     imageAlt: 'Image of game menu',
     bullets: [
       'Coordinated with team leads to keep project scope and schedule aligned through the semester.',
@@ -111,8 +115,7 @@ export const activities = [
     role: 'Volunteer',
     org: 'FIRST Robotics',
     dateRange: 'Spring 2023 - Present',
-    imageUrl:
-      'src/assets/FIRST_Horz_RGB.png',
+    imageUrl: firstLogo,
     imageAlt: 'FIRST Robotics logo',
     bullets: [
       'Served as a referee at FIRST Lego League events and mentored student teams in competition settings.',
@@ -176,7 +179,7 @@ export const projects = [
     subtitle: 'Backend engineering, VPS deployment, and containerized routing',
     tags: ['Backend Engineering', 'Docker', 'Traefik', 'PocketBase'],
     repoUrl: 'https://github.com/sahithrajesh/OffBeat',
-    image: 'src/assets/offbeat.png',
+    image: offbeatImage,
     overview: [
       'OffBeat was conceptualized as a web application designed to systematically analyze the underlying moods of user-generated Spotify playlists. During the initial project phase, the team defined a comprehensive feature set focused on clustering songs into distinct mood categories, identifying anomalous tracks that deviated from the primary cluster, and generating targeted musical recommendations. To achieve this, we designed a multi-layered system that integrates standard Spotify track metadata with advanced audio features—sourced via the ReccoBeats API—and community-driven social tags from Last.fm.',
       'The project commenced with rigorous architectural planning. The team formally mapped the complete data pipeline, detailing the programmatic ingestion of user playlists, the asynchronous integration with external APIs for acoustic and energy analysis, and the subsequent data transformations. This process produced a formal blueprint of the application flow, spanning from the user-facing React frontend to the backend Python and Sphinx-based analysis notebooks, which governed the data science logic.',
@@ -191,7 +194,7 @@ export const projects = [
     subtitle: 'Lead programming, game systems development, and team collaboration',
     tags: ['Game Development', 'State Machines', 'Team Leadership'],
     repoUrl: 'https://github.com/NoShenGG/project-star/',
-    image: 'src/assets/JTAS_Poster.png',
+    image: jtasPoster,
     overview: [
       'My involvement with Journey to Arduous Star began as a software contributor within Georgia Tech\'s VGDev community. Initially, my focus was directed toward understanding the existing codebase, assisting with general game systems design, and completing foundational implementation tasks. This preliminary phase allowed me to acclimate to the team\'s version control workflow and identify specific areas for architectural improvement within the game\'s core loop.',
       'As development progressed and character behaviors increased in complexity, it became evident that the existing logic required a more rigorous structure. Consequently, I designed and implemented core architectural systems, specifically the player and entity state machines. Transitioning the character logic to a finite state machine model made state changes strictly deterministic, reduced edge-case bugs associated with overlapping inputs or concurrent animations, and substantially improved overall codebase maintainability.',
