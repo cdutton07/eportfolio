@@ -1,0 +1,54 @@
+
+
+ 
+Christian E. Dutton 
+(470) 658-8006 | christianedutton@gmail.com | US Citizen 
+ 
+Objective     
+To obtain an internship for summer 2026 where I can use the experience gained from my previous engineering experiences and my 
+coursework to grow my skillset as an aspiring computer engineer. 
+ 
+Education     
+Georgia Institute of Technology | Atlanta, GA     August 2025 – Present 
+Bachelor of Science in Computer Engineering, GPA 4.00   Expected Graduation, May 2028 
+ 
+Skills     
+Programming:  Java (Gradle), Python, C/C++, C#, JavaScript, React, RISC-V Assembly, Matlab, SystemVerilog 
+Platforms:  Linux (Ubuntu, Debian, RedHat), Windows, Azure Cloud 
+Hardware:  Raspberry Pi, Arduino, FPGAs, oscilloscope, logic analyzer, ESP32 
+Software Tools/Technologies:  Android Studio, Altera Quartus II, SolidWorks, Git, GitHub, SQLite, OAuth 
+Communication:  Technical reports, instruction manuals, presentations (large and small audiences) 
+ 
+Experience     
+Siemens Energy | Alpharetta, Georgia   August 2024 – May 2025 
+Controls Engineering Intern   
+• Engineered control systems for power plants using Siemens Energy T3000 
+• Simulated theoretical scenarios to test control logic and ensure correct behavior 
+• Designed user interfaces that allow operators seamless and efficient control over their plant 
+• Communicated with clients to develop personalized controls software to fit their preferences 
+• Validated software and hardware integration to ensure functionality and compliance with client specifications 
+ 
+Relevant Coursework     
+Digital Design:  CMOS Logic, Gate Level Design, FPGA Programming 
+Circuit Analysis:  Linear, First Order, and Second Order Circuits, Op-Amps, Circuit Design, Multimeters 
+Data Structures & Algorithms:  Arrays, Linked Lists, BSTs, Sorting Algorithms, String Searching, Dijkstra’s Algorithm, Graph Traversal 
+Signal Processing:  Sampling, Fourier Transform, z-Transform, FIR/IIR Filters, Matlab 
+Programming HW/SW Systems:  Assembly Programming in RISC-V, Using ESP32 chips, Programming in C/C++ 
+ 
+Activities     
+Journey to Arduous Star   Fall 2025 - Present  
+Lead Programmer 
+A project within the video game development club, VGDev, at Georgia Tech.  
+• Coordinated with other team leads to keep the project on schedule and within scope throughout the semester. 
+• Reviewed code and provided feedback to grow other members of the team and integrate their work with the project. 
+• Designed and wrote finite state machine logic for the characters within the game to function smoothly and efficiently. 
+• Analyzed the codebase to eliminate bugs as they were discovered, improving playability for the users. 
+ 
+FIRST Robotics    Spring 2023 - Present 
+Volunteer 
+Non-profit that runs educational robotics competitions for elementary-middle school (FIRST Lego League) and high school (FIRST 
+Robotics Competition) 
+• Served as a referee for numerous FIRST Lego League competitions where I had to interact with and mentor teams. 
+• Added to the positive environment of the tournament as a public facing volunteer. 
+• Assisted with FIRST Robotics competition tournaments as both field staff and an AV technician. 
+• Ensured the smooth operation of said tournament by being adaptable to any situations and roles. 
