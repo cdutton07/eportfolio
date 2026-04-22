@@ -2,6 +2,8 @@ import firstLogo from '@/assets/FIRST_Horz_RGB.png'
 import jtasPoster from '@/assets/JTAS_Poster.png'
 import jtasSplashArt from '@/assets/jtas_splash_art.png'
 import offbeatImage from '@/assets/offbeat.png'
+import mc_circuit from '@/assets/mc_circuit.jpeg'
+import mc_demo from '@/assets/mc_demo.mp4'
 
 export const profile = {
   name: 'Christian E. Dutton',
@@ -172,7 +174,83 @@ export const goals = {
   ],
 }
 
-export const projects = [
+export type ProjectMediaBlock =
+  | {
+      type: 'text'
+      content: string
+    }
+  | {
+      type: 'image'
+      src: string
+      alt: string
+      heightPx?: number
+      verticalCenterPct?: number
+    }
+  | {
+      type: 'video'
+      src: string
+      title: string
+    }
+
+export type Project = {
+  id: string
+  title: string
+  subtitle: string
+  tags: string[]
+  repoUrl: string
+  image: string
+  overview: string[]
+  mediaBlocks?: ProjectMediaBlock[]
+}
+
+export const projects: Project[] = [
+  {
+    id: 'motioncontroller',
+    title: 'MotionController',
+    subtitle: 'Motion-sensing engineering project using ESP32 and MPU-6050',
+    tags: ['Embedded Systems', '6-Axis IMU', "BLE Communication"],
+    repoUrl: 'https://github.com/cdutton07/MotionController',
+    image:
+      '',
+    overview: [
+      'Placeholder summary: MotionController is a project focused on capturing movement data, processing it in real time, and providing visual feedback through an interactive interface.',
+    ],
+    mediaBlocks: [
+      {
+        type: 'text',
+        content:
+          'This idea started as a personal project inspired by a friend. We thought I was cool how Nintendo controllers like the Wii Remote and Switch Joy-Cons track movement and allow it to be used to control games. Wanting to try building something similar, I came up with my idea for a MotionController. I decided on using an ESP32 microcontroller for its built-in Bluetooth capabilities and the MPU-6050 sensor for motion tracking. The project was programmed in C++ using the Arduino framework, which allowed for rapid development and easy integration of libraries for both the sensor and Bluetooth communication.',
+      },
+      {
+        type: 'text',
+        content:
+          'Initially, I had to come up with a hardware design that would allow all the components to connect properly. The MPU-6050 sensor was connected to the ESP32 via I2C, and I had to ensure that the power requirements were met while keeping the design compact. I decided on using a breadboard for the functional prototype since it allowed for the easy connection of components and minimal soldering. This all proceeded fine, however a minor limitation I encountered was the lack of space on the small breadboard. There was only enough room for one side of pins of the ESP32 to be accessible. Due to this design constraint, I had to wire pins such that it only used that available side. The size also constrained me to only two buttons. With a larger breadboard or a custom PCB, I could integrate a full amount of buttons fitting for a game controller.',
+      },
+      {
+        type: 'image',
+        src:
+          mc_circuit,
+        alt: 'MotionController dashboard showing telemetry and control status',
+        heightPx: 700,
+        verticalCenterPct: 56,
+      },
+      {
+        type: 'text',
+        content:
+          'Then came software. I had to write the firmware for the ESP32 to read data from the MPU-6050 sensor, process it, and send it over Bluetooth. I used an I2C library for interfacing with the MPU-6050, and I implemented a simple data processing algorithm to convert the raw sensor data into meaningful motion information. For Bluetooth, I used the BLE protocol to interface with the target device as an HID controller, which is the standard protocol for bluetooth game controllers. The pitch and yaw of the sensor, adjusted for gravity, were send as the right joystick axises (2,3) which allowed for one full joystick to be controlled with my controller. I also included the A button for proof of concept of sending other button inputs over the protocol.',
+      },
+      {
+        type: 'video',
+        src: mc_demo,
+        title: 'MotionController Demo Video',
+      },
+      {
+        type: 'text',
+        content:
+          'Across this project, I gained or improved many ECE skills. I learned how to work with microcontrollers and embedded programming, which was a new area for me. I also had to do some light soldering to solder header pins on the MPU-6050. Lastly, I had to read documentation to determine how to wire everything together. This project, while relatively simple and small, still taught me a great deal of engineering skills and was a fun practical way to apply what I have been learning in my classes. Since it was so successful, I may plan on continuing it to integrate a custom PCB and try and make a full product rather than just a functional prototype.',
+      },
+    ],
+  },
   {
     id: 'offbeat',
     title: 'OffBeat',

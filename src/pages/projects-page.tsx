@@ -45,14 +45,16 @@ export function ProjectsPage() {
         </div>
 
         <Card key={selectedProject.id} className="overflow-hidden border-black/10 bg-white/85">
-          <img
-            src={selectedProject.image}
-            alt={selectedProject.title}
-            className={`h-96 w-full object-cover ${
-              selectedProject.id === 'journey-to-arduous-star' ? 'object-[center_90%]' : 'object-[center_0%]'
-            }`}
-            loading="lazy"
-          />
+          {!selectedProject.mediaBlocks && (
+            <img
+              src={selectedProject.image}
+              alt={selectedProject.title}
+              className={`h-96 w-full object-cover ${
+                selectedProject.id === 'journey-to-arduous-star' ? 'object-[center_90%]' : 'object-[center_0%]'
+              }`}
+              loading="lazy"
+            />
+          )}
           <CardHeader>
             <CardTitle className="text-2xl">{selectedProject.title}</CardTitle>
             <p className="text-sm text-foreground/70">{selectedProject.subtitle}</p>
@@ -65,9 +67,52 @@ export function ProjectsPage() {
             </div>
           </CardHeader>
           <CardContent className="space-y-5 text-base leading-7 text-foreground/85">
-            {selectedProject.overview.map((paragraph, index) => (
-              <p key={`${selectedProject.id}-overview-${index}`}>{paragraph}</p>
-            ))}
+            {selectedProject.mediaBlocks
+              ? selectedProject.mediaBlocks.map((block, index) => {
+                  if (block.type === 'image') {
+                    const clampedVerticalCenter = Math.min(
+                      100,
+                      Math.max(0, block.verticalCenterPct ?? 50),
+                    )
+                    return (
+                      <img
+                        key={`${selectedProject.id}-media-${index}`}
+                        src={block.src}
+                        alt={block.alt}
+                        className="w-full rounded-xl border border-black/10 object-cover"
+                        style={{
+                          height: `${block.heightPx ?? 320}px`,
+                          objectPosition: `center ${clampedVerticalCenter}%`,
+                        }}
+                        loading="lazy"
+                      />
+                    )
+                  }
+
+                  if (block.type === 'video') {
+                    return (
+                      <div
+                        key={`${selectedProject.id}-media-${index}`}
+                        className="overflow-hidden rounded-xl border border-black/10"
+                      >
+                        <iframe
+                          src={block.src}
+                          title={block.title}
+                          className="aspect-video w-full"
+                          loading="lazy"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                        />
+                      </div>
+                    )
+                  }
+
+                  return <p key={`${selectedProject.id}-media-${index}`}>{block.content}</p>
+                })
+              : selectedProject.overview.map((paragraph, index) => (
+                  <p key={`${selectedProject.id}-overview-${index}`}>{paragraph}</p>
+                ))}
 
             <p className="text-sm text-foreground/80">
               Repository:{' '}
