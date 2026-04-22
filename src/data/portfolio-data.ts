@@ -2,7 +2,7 @@ import firstLogo from '@/assets/FIRST_Horz_RGB.png'
 import jtasPoster from '@/assets/JTAS_Poster.png'
 import jtasSplashArt from '@/assets/jtas_splash_art.png'
 import offbeatImage from '@/assets/offbeat.png'
-import mc_circuit from '@/assets/mc_circuit.jpeg'
+import mc_circuit from '@/assets/mc_circuit.jpg'
 import mc_demo from '@/assets/mc_demo.mp4'
 
 export const profile = {
